@@ -1,24 +1,51 @@
 /* Application-wide Styles */
+
 h1 {
-    color: #369;
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
-  }
-  h2, h3 {
-    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+h2,
+h3 {
+    color: rgb(4, 206, 162);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
-  }
-  body {
-    margin: 2em;
-  }
-  body, input[type="text"], button {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+input[type="text"],
+button {
     color: #333;
     font-family: Cambria, Georgia, serif;
-  }
-  /* everywhere else */
-  * {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* everywhere else */
+
+* {
     font-family: Arial, Helvetica, sans-serif;
-  }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+}
+
+html,
+body {
+    height: 100%;
+    background-color: blanchedalmond;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.title-center {
+    margin: 0;
+    padding: 0;
+    flex: 1 1 auto;
+    text-align: center;
+}
