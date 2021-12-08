@@ -1,0 +1,13 @@
+.avatar {
+    margin-top: 100px;
+    vertical-align: middle;
+    height: auto;
+    border-radius: 50%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
