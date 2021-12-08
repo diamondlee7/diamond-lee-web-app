@@ -1,5 +1,6 @@
 .header {
-    width:100%;
+    width: relative;
     height: 20%;
     background-color: cadetblue;
+    margin: 0;
 }

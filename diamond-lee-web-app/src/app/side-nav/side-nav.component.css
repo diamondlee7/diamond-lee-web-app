@@ -1,0 +1,34 @@
+.container {
+    float: right;
+    width: fit-content;
+    height: 100%;
+    border: transparent;
+    background-color: cadetblue;
+}
+
+.sidenav {
+    padding: 20px;
+    border: transparent;
+}
+
+.sidenav a {
+    color: black;
+    font-size: 30;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.nav-bar-sub-title {
+    margin: 50px;
+    color: black;
+}
+
+.button {
+    background-color: cadetblue;
+    border: transparent;
+    width: fit-content;
+    font-size: 40;
+    font-weight: bold;
+    display: inline-block;
+}
