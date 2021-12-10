@@ -3,12 +3,12 @@
     width: fit-content;
     height: 100%;
     border: transparent;
-    background-color: cadetblue;
 }
 
 .sidenav {
     padding: 20px;
     border: transparent;
+    background-color: cadetblue;
 }
 
 .sidenav a {

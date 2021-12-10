@@ -3,10 +3,12 @@
 
         <mat-nav-list>
             <mat-list-item>
-                <h2 mat-icon-button class="button" (click)="isExpanded = !isExpanded">
-                    Menu
-                    <mat-icon mat-icon-button *ngIf="isExpanded">close</mat-icon>
-                </h2>
+                <div>
+                    <h2 mat-icon-button class="button" (click)="isExpanded = !isExpanded">
+                        Menu
+                        <mat-icon class="alignedwithicon" mat-icon-button *ngIf="isExpanded">close</mat-icon>
+                    </h2>
+                </div>
             </mat-list-item>
             <mat-list-item>
                 <mat-icon mat-list-icon *ngIf="isExpanded">home</mat-icon>

@@ -5,14 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './side-nav.component.html',
   styleUrls: ['./side-nav.component.css']
 })
-export class SideNavComponent implements OnInit {
+export class SideNavComponent {
 
   showFiller = false;
   isExpanded = false;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }
