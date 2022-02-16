@@ -1,11 +1,6 @@
 {
     "name": "diamond-lee-web-app",
     "version": "0.0.0",
-    "scripts": {
-        "start": "node server.js",
-        "watch-ts": "tsc -w",
-        "deploy": "git add . && git commit -m Heroku && git push heroku master"
-    },
     "private": true,
     "dependencies": {
         "@angular/animations": "~13.0.0",
