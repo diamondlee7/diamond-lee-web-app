@@ -16,6 +16,6 @@ app.use(express.static('index.html' + '../dist/diamond-lee-web-app'));
 
 // Start the app by listening on the default Heroku port
 app.get('*', function(req, res) {
-    res.sendFile('../dist/diamond-lee-web-app/index.html');
+    res.sendFile('app/dist/diamond-lee-web-app/index.html');
 });
 app.listen(process.env.PORT || 8080);
