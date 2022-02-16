@@ -9,7 +9,6 @@ function requireHTTPS(req, res, next) {
 //Install express server
 const express = require('express');
 const app = express();
-const app = express();
 app.use(requireHTTPS);
 
 // Serve only the static files form the dist directory
