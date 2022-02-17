@@ -20,4 +20,3 @@ app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'src/', 'index.html'));
 });
 app.listen(process.env.PORT || 8080);
-/Users/diamondlee / PersonalWebsite / diamond - lee - web - app / src / index.html
