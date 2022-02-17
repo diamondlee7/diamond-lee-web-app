@@ -1,1 +1,1 @@
-web: node dist/server.js
+web: node dist/diamond-lee-web-app/server.js
