@@ -12,7 +12,7 @@ const app = express();
 app.use(requireHTTPS);
 
 // Serve only the static files form the dist directory
-app.use(express.static('index.html' + '../dist/diamond-lee-web-app/'));
+app.use('dist/diamond-lee-web-app', express.static(path.join(__dirname, '/')));
 
 // Start the app by listening on the default Heroku port
 app.get('*', function(req, res) {
