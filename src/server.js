@@ -13,7 +13,7 @@ const app = express();
 app.use(requireHTTPS);
 
 // Serve only the static files form the dist directory
-app.use(express.static("src"))
+app.use('/static', express.static("src"))
 
 // Start the app by listening on the default Heroku port
 app.get('/', function(req, res) {
