@@ -12,8 +12,13 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
-// Serve only the static files form the dist directory
-app.use('/static', express.static("src"))
+// GET /style.css etc
+app.use(express.static(__dirname + '/src'));
+
+// Mount the middleware at "/static" to serve static content only when their request path is prefixed with "/static".
+
+// GET /static/style.css etc.
+app.use('/static', express.static(__dirname + '/src'));
 
 // Start the app by listening on the default Heroku port
 app.get('/', function(req, res) {
