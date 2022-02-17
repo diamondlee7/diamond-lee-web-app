@@ -7,6 +7,7 @@ function requireHTTPS(req, res, next) {
 }
 
 //Install express server
+const path = require('path');
 const express = require('express');
 const app = express();
 app.use(requireHTTPS);
