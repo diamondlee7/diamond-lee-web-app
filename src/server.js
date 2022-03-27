@@ -17,6 +17,13 @@ app.use(express.static(__dirname + '/src/index.html'));
 
 // Start the app by listening on the default Heroku port
 app.get('/', function(req, res) {
-    res.sendFile('index.html', { root: path.join(__dirname, '../src') });
+    res.send(browserRefresh('index.html'));
 });
+
+function browserRefresh(filePath) {
+    var html = fs.readFileSync(filePath);
+    var $ = cheerio.load(html);
+    $('body').append(`<script src="${process.env.BROWSER_REFRESH_URL}"></script>`);
+    return $.html();
+}
 app.listen(process.env.PORT || 8080);
