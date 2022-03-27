@@ -16,6 +16,8 @@ app.use(requireHTTPS);
 app.use(express.static(__dirname + '/src/index.html'));
 
 // Start the app by listening on the default Heroku port
+const fs = require('fs');
+
 app.get('/', function(req, res) {
     res.send(browserRefresh('index.html'));
 });
