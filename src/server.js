@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/src/index.html'));
 const fs = require('fs');
 
 app.get('/', function(req, res) {
-    res.send(browserRefresh('index.html'));
+    res.sendFile(browserRefresh('index.html'));
 });
 
 function browserRefresh(filePath) {
