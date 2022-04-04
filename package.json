@@ -1,9 +1,8 @@
 {
     "name": "diamond-lee-web-app",
-    "type": "module",
     "version": "0.0.0",
     "scripts": {
-        "start": "node --experimental-modules src/server.js",
+        "start": "node src/server.js",
         "watch-ts": "tsc -w",
         "deploy": "git add . && git commit -m Heroku && git push heroku main"
     },
