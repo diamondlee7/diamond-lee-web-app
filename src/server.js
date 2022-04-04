@@ -20,7 +20,7 @@ const fs = require('fs');
 const ch = require('cheerio');
 
 app.get('/', function(req, res) {
-    res.sendFile(browserRefresh('dist/diamond-lee-web-app/index.html'));
+    res.sendFile(browserRefresh('../dist/diamond-lee-web-app/index.html'));
 });
 
 function browserRefresh(filePath) {
