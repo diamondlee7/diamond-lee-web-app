@@ -3,7 +3,7 @@
     "type": "module",
     "version": "0.0.0",
     "scripts": {
-        "start": "node src/server.js",
+        "start": "node --experimental-modules src/server.js",
         "watch-ts": "tsc -w",
         "deploy": "git add . && git commit -m Heroku && git push heroku main"
     },
