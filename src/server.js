@@ -1,3 +1,5 @@
+import * as cheerio from 'cheerio';
+
 function requireHTTPS(req, res, next) {
     // The 'x-forwarded-proto' check is for Heroku
     if (!req.secure && req.get('x-forwarded-proto') !== 'https') {
