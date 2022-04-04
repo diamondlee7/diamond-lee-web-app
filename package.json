@@ -2,7 +2,7 @@
     "name": "diamond-lee-web-app",
     "version": "0.0.0",
     "scripts": {
-        "start": "node src/server.js",
+        "start": "node /src/server.js",
         "watch-ts": "tsc -w",
         "deploy": "git add . && git commit -m Heroku && git push heroku main"
     },
