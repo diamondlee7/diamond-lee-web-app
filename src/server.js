@@ -1,3 +1,5 @@
+import * as cheerio from 'cheerio';
+
 function requireHTTPS(req, res, next) {
     // The 'x-forwarded-proto' check is for Heroku
     if (!req.secure && req.get('x-forwarded-proto') !== 'https') {
@@ -17,15 +19,14 @@ app.use(express.static(__dirname + '/index.html'));
 
 // Start the app by listening on the default Heroku port
 const fs = require('fs');
-const ch = require('cheerio');
 
 app.get('/', function(req, res) {
-    res.sendFile(browserRefresh(path.join(__dirname, '../dist/diamond-lee-web-app/', 'index.html')));
+    res.sendFile(browserRefresh(__dirname + '/index.html'));
 });
 
 function browserRefresh(filePath) {
     var html = fs.readFileSync(filePath);
-    var $ = ch.load(html);
+    var $ = cheerio.load(html);
     $('body').append(`<script src="${process.env.BROWSER_REFRESH_URL}"></script>`);
     return $.html();
 }
