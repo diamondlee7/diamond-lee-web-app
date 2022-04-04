@@ -20,7 +20,7 @@ const fs = require('fs');
 const ch = require('cheerio');
 
 app.get('/', function(req, res) {
-    res.sendFile(browserRefresh(__dirname + '/index.html'));
+    res.sendFile(browserRefresh('index.html', { root: __dirname }));
 });
 
 function browserRefresh(filePath) {
