@@ -1,4 +1,4 @@
-import * as cheerio from 'cheerio';
+import { cheerio } from 'cheerio';
 
 function requireHTTPS(req, res, next) {
     // The 'x-forwarded-proto' check is for Heroku
@@ -9,7 +9,7 @@ function requireHTTPS(req, res, next) {
 }
 
 //Install express server
-const path = require('path');
+const cheerio = require('cheerio');
 const express = require('express');
 const app = express();
 app.use(requireHTTPS);
