@@ -19,13 +19,13 @@ app.use(express.static(__dirname + '/public/index.html'));
 const fs = require('fs');
 
 app.get('/', function(req, res) {
-    res.sendFile(browserRefresh(__dirname + '/public/index.html'));
+    res.sendFile(_dirname + '/public/index.html');
 });
 
-function browserRefresh(filePath) {
-    var html = fs.readFileSync(filePath);
-    var $ = cheerio.load(html);
-    $('body').append(`<script src="${process.env.BROWSER_REFRESH_URL}"></script>`);
-    return $.html();
-}
+// function browserRefresh(filePath) {
+//     var html = fs.readFileSync(filePath);
+//     var $ = cheerio.load(html);
+//     $('body').append(`<script src="${process.env.BROWSER_REFRESH_URL}"></script>`);
+//     return $.html();
+// }
 app.listen(process.env.PORT || 8080);
