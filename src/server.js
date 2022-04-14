@@ -15,13 +15,13 @@ const app = express();
 app.use(requireHTTPS);
 
 // GET /style.css etc
-app.use(express.static(__dirname + 'index.html'));
+app.use(express.static(__dirname + '/index.html'));
 
 // Start the app by listening on the default Heroku port
 const fs = require('fs');
 
 app.get('/', function(req, res) {
-    res.sendFile(browserRefresh(__dirname + 'index.html'));
+    res.sendFile(browserRefresh(__dirname + '/index.html'));
 });
 
 function browserRefresh(filePath) {
