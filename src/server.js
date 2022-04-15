@@ -21,7 +21,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 const fs = require('fs');
 
 app.get('/', function(req, res) {
-    res.sendFile('index.html', { root: __dirname })
+    res.sendFile('/public/index.html', { root: __dirname })
 });
 
 // function browserRefresh(filePath) {
