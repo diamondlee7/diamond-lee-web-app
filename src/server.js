@@ -20,9 +20,9 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 // Start the app by listening on the default Heroku port
 const fs = require('fs');
 
-// app.get('/', function(req, res) {
-//     res.sendFile(__dirname + '/public/index.html');
-// });
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/public/index.html');
+});
 
 // function browserRefresh(filePath) {
 //     var html = fs.readFileSync(filePath);
