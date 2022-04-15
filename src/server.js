@@ -7,27 +7,25 @@ function requireHTTPS(req, res, next) {
 }
 
 //Install express server
-const cheerio = require('cheerio');
 const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/diamond-lee-web-app'));
 
-// GET /style.css etc
-const path = require('path')
-app.use('/static', express.static(path.join(__dirname, 'public')))
+app.get('/*', function(req, res) {
 
-// Start the app by listening on the default Heroku port
-const fs = require('fs');
-
-app.get('/', function(req, res) {
-    res.sendFile('/public/index.html', { root: __dirname })
+    res.sendFile(path.join(__dirname + '/dist/diamond-lee-web-app/index.html'));
 });
 
-// function browserRefresh(filePath) {
-//     var html = fs.readFileSync(filePath);
-//     var $ = cheerio.load(html);
-//     $('body').append(`<script src="${process.env.BROWSER_REFRESH_URL}"></script>`);
-//     return $.html();
-// }
+
+// // GET /style.css etc
+// const path = require('path')
+// app.use('/static', express.static(path.join(__dirname, 'public')))
+
+// app.get('/', function(req, res) {
+//     res.sendFile('/public/index.html', { root: __dirname })
+// });
+
 app.listen(process.env.PORT || 8080);

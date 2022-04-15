@@ -3,6 +3,7 @@
     "version": "0.0.0",
     "scripts": {
         "start": "node src/server.js",
+        "heroku-postbuild": "ng build --prod",
         "watch-ts": "tsc -w",
         "deploy": "git add . && git commit -m Heroku && git push heroku main"
     },
