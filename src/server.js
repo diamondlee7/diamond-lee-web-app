@@ -14,16 +14,7 @@ app.use(requireHTTPS);
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '../dist/diamond-lee-web-app'));
 
-// app.get('/*', function(req, res) {
-//     res.sendFile(path.join(__dirname + '/dist/diamond-lee-web-app/index.html'));
-// });
-
-
-// // GET /style.css etc
-// const path = require('path')
-// app.use('/static', express.static(path.join(__dirname, 'public')))
-
-app.get('/', function(req, res) {
+app.get('/*', function(req, res) {
     res.sendFile('../dist/diamond-lee-web-app/index.html', { root: __dirname })
 });
 console.log(__dirname);
