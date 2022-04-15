@@ -15,7 +15,7 @@ app.use(requireHTTPS);
 app.use(express.static(__dirname + '../dist/diamond-lee-web-app'));
 
 app.get('/*', function(req, res) {
-    res.sendFile('../dist/diamond-lee-web-app/index.html', { root: __dirname })
+    res.sendFile(path.resolve('/dist/diamond-lee-web-app/index.html'))
 });
 console.log(__dirname);
 app.listen(process.env.PORT || 8080);
