@@ -12,7 +12,7 @@ const app = express();
 app.use(requireHTTPS);
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/diamond-lee-web-app'));
+app.use(express.static(__dirname + '../dist/diamond-lee-web-app'));
 
 // app.get('/*', function(req, res) {
 //     res.sendFile(path.join(__dirname + '/dist/diamond-lee-web-app/index.html'));
@@ -24,7 +24,7 @@ app.use(express.static(__dirname + '/dist/diamond-lee-web-app'));
 // app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.get('/', function(req, res) {
-    res.sendFile('/public/index.html', { root: __dirname })
+    res.sendFile('../dist/diamond-lee-web-app/index.html', { root: __dirname })
 });
-
+console.log(__dirname);
 app.listen(process.env.PORT || 8080);
