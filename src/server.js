@@ -12,8 +12,9 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
+
 // GET /style.css etc
-app.use(express.static(__dirname + '/public/index.html'));
+app.use(express.static(__dirname + '/public'));
 
 // Start the app by listening on the default Heroku port
 const fs = require('fs');
